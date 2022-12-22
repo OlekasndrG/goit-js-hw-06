@@ -18,13 +18,23 @@ const images = [
 // Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
 // Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
 const elementsGallery = document.querySelector('.gallery');
-const list = images.forEach(item => {
+images.forEach(item => {
   const { alt, url } = item;
   return elementsGallery.insertAdjacentHTML(
     'afterbegin',
     `<li> <img alt = ${alt}  src = ${url} class ="gallery__item"> </li>`
   );
 });
+
+// const elementsGallery = document.querySelector('.gallery');
+// const galleryItem = images
+//   .map(
+//     item =>
+//       `<li> <img alt = ${item.alt}  src = ${item.url} class ="gallery__item"> </li>`
+//   )
+//   .join('');
+// elementsGallery.insertAdjacentHTML('beforeend', galleryItem);
+
 // const gallery = images.map(item => {
 //   const liEl = document.createElement('li');
 //   const imageEl = document.createElement('img');
@@ -39,5 +49,3 @@ const list = images.forEach(item => {
 
 // elementsGallery.prepend(list);
 // console.log(list);
-
-

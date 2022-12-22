@@ -29,8 +29,9 @@ function onFormSubmit(event) {
   };
   if (email === '' || password === '') {
     alert('Всі поля мають бути заповнені');
-  } else {
-    console.log(formData);
+    return;
   }
+  console.log(formData);
+
   form.reset();
 }
